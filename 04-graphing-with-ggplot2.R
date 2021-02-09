@@ -11,7 +11,7 @@ barplot
 #box plot
 dilution_data <- microbiology_events %>%
   filter(!is.na(dilution_value)) %>%
-  filter(spec_type_desc == "Mini-BAL" | spec_type_desc == "SWAB" | spec_type_desc == "SPUTUM")
+  filter(spec_type_desc == "mini-bal" | spec_type_desc == "swab" | spec_type_desc == "sputum")
 boxplot <- ggplot(dilution_data, aes(x=as.factor(spec_type_desc), y=dilution_value)) +
   geom_boxplot() +
   xlab("Sample Type") +
